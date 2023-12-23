@@ -1,5 +1,5 @@
 body {
-    background-color:#cbd5e1;
+    background-color: white;
     margin: 0;
     padding: 0;
     font-family: Roboto;
@@ -29,9 +29,11 @@ svg {
 .container {
     width: 100vw;
     height: 100vh;
+    margin: 0;
+    gap: 0;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 15fr;
 }
 
 .sidebar .logo {
@@ -66,8 +68,7 @@ svg {
     grid-template-columns: 1fr 9fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr;
     background-color: white;
-    height: 90%;
-    box-shadow: 0 8px 6px -6px darkgray;
+    box-shadow: 0 -4px 8px -6px rgb(0, 0, 0) inset;
 }
 
 .header input {
@@ -75,7 +76,7 @@ svg {
     align-self: center;
     background-color: #cbd5e1;
     border-radius: 30px;
-    height: 40%;
+    height: 45%;
     width: 100%;
     border-style: none;
     grid-column: 2 / 4;
@@ -110,8 +111,9 @@ svg {
 
 .title > p {
     display: flex;
-    align-items: end;
+    align-self: end;
     margin-bottom: 3px;
+    margin-left: 0;
 }
 
 .title > h2 {
@@ -143,17 +145,18 @@ svg {
 .main-content {
     background-color: #cbd5e1;
     display: grid;
-    grid-template-columns: 6fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    grid-template-columns: 7fr 2fr;
 }
 
 .main {
     margin: 10px;
     display: grid;
-    gap: 10px;
+    gap: 25px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr 3fr;
-    grid-row: 1 / 3;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row: 2 / 3;
+    height: 90%;
 }
 
 .main-content h2 {
@@ -164,16 +167,108 @@ svg {
 
 
 .project-cards {
-    content-align: center;
+    border-left: 7px solid #dfad16;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: black;
     border-radius: 8px;
     box-shadow: 5px 5px 5px 0px #9da5af;
     background-color: white;
-    height: 90%;
-    width: 90%
+    height: 100%;
+    width: 100%;
+}
+
+.project-cards h3,p {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0;
+    margin-bottom: 6px;
+    align-self: flex-start;
 }
 
 #SuperCoolProjects {
     grid-column: 1;
 }
 
+#project-header {
+    display: flex;
+    margin-left: 13px;
+    margin-bottom: 0;
+    margin-top: 0;
+    align-self: flex-end;
+}
+
+#announcement {
+    display: flex;
+    margin-left: 13px;
+    margin-bottom: 0;
+    align-self: flex-end;
+}
+
+.announcements {
+    margin-top: 10px;
+    margin-right: 10px;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px 0px #9da5af;
+    background-color: white;
+    color: black;
+    height: 80%;
+}
+
+
+.announce-card {
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+
+.announce-card h4 {
+    color: black;
+    align-self: flex-start;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.trending-div {
+    display: grid;
+    margin-top: 10px;
+    margin-right: 10px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px 0px #9da5af;
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    height: 80%;
+}
+
+.trending-div div {
+    display: contents;
+}
+
+
+.Announcement-Trending {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.project-header2 {
+    display: flex;
+    margin-left: 13px;
+    margin-bottom: 0;
+    align-self: flex-end;
+}
+
+.user {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+}
